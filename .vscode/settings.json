@@ -3,7 +3,7 @@
     "editor.wrappingColumn": 0,
     "files.exclude": {
         // "**/node_modules": {},    //make the node_modules invisible
-        "typings": {},
+        "typings": {},  
         "**/*.map": {},
         "**/*.js": {
             "when": "$(basename).ts"
