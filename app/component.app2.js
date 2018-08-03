@@ -89,4 +89,4 @@ System.register(["@angular/core"], function(exports_1, context_1) {
         }
     }
 });
-//# sourceMappingURL=component.app.js.map
+//# sourceMappingURL=component.app2.js.map
