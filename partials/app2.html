@@ -10,15 +10,24 @@
 <!-- card search -->
 
 
-<ul class="artistlist cf">
+<ul class="artistlist cf"
+     *ngIf="query">
     <li class="artistlist-item cf"  
-        *ngFor="let item of artists">
-        <img class="artist-img" 
+        (click)="showArtist(item); query=''"
+        *ngFor="let item of (artists | search: query)">
+        <!-- <img class="artist-img"
         src="images/{{item.shortname}}_tn.jpg" 
         alt="{{item.name}} phono">
         <div class="artist-info">
             <h2 class="artist-name">{{ item.name }}</h2>
             <h3 class="artist-reknown">{{ item.reknown }}</h3>
-        </div>
+        </div> -->
+        <artist-item class="content" 
+        [artist]=item></artist-item>
     </li>
 </ul>
+
+<artist-details 
+*ngIf="currentArtist"
+[artist]="currentArtist"
+></artist-details>
